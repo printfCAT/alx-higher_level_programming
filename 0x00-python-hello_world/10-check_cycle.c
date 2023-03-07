@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 /**
 * check_cycle - checks if a singly linked list has a cycle in it
@@ -9,23 +8,17 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *slow = list;
-	listint_t *fast = list;
+	listint_t *fast;
 
 	if (list == NULL)
-		return ('\0');
-	slow = malloc(sizeof(listint_t));
-	fast = malloc(sizeof(listint_t));
-	if (!slow || !fast)
-		return ('\0');
+		return (0);
+	fast = list->next;
 	while (slow && fast && fast->next)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
 		if (slow == fast)
 			return (1);
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	free(slow);
-	free(fast);
-
 	return (0);
 }
