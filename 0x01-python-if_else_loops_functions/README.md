@@ -13,4 +13,7 @@ __Contains the following project tasks and files:__
 * 11-pow.py  
 * 12-fizzbuzz.py  
 * 13-insert_number.c  
+* 100-print_tepahpa.py  
+* 101-remove_char_at.py  
+* 102-magic_calculation.py  
 * lists.h
