@@ -67,5 +67,6 @@ class Rectangle:
     def __repr__(self):
         """returns a string rep of a rectangle"""
         return "Rectangle({}, {})". format(self.__width, self.__height)
+
     def __del__(self):
         print("Bye rectangle...")
