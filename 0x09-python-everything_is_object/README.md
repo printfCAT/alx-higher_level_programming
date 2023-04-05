@@ -18,9 +18,13 @@ __Contains the following project tasks and files:__
 * 16-answer.txt  
 * 17-answer.txt  
 * 18-answer.txt  
-* 19-answer.txt  
+* 19-answer.py  
 * 20-answer.txt  
 * 21-answer.txt  
 * 22-answer.txt  
 * 23-answer.txt  
 * 24-answer.txt  
+* 25-answer.txt  
+* 26-answer.txt  
+* 27-answer.txt  
+* 28-answer.txt  
