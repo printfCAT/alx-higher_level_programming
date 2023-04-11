@@ -35,12 +35,16 @@ Test Case 3:
     >>>my_list = MyList()
     >>>isinstance(my_list, list)
     True
+
+    >>>my_list = MyList()
     >>>issubclass(MyList, list)
     True
+
+    >>>my_list = MyList()
     >>>isinstance(my_list, MyList)
     True
 
 Test Case 4:
     >>>my_list = MyList()
-    >>>print(my_list)
+    >>>my_list.print_sorted()
     []
