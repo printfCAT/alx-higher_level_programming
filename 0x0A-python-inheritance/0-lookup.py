@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """ the function to return att and methods of obj """
     return dir(obj)
