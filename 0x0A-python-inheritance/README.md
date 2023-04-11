@@ -8,9 +8,9 @@ __Contains the following project tasks and files:__
 * 5-base_geometry.py  
 * 6-base_geometry.py  
 * 7-base_geometry.py 
-* tests  
 * 7-base_geometry.txt  
 * 8-rectangle.py  
 * 9-rectangle.py  
 * 10-square.py  
-* 11-square.py
+* 11-square.py  
+* tests
