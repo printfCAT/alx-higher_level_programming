@@ -1,5 +1,6 @@
 #1-my_list.py
 
+#importing module:
 >>>MyList = __import__('1-my_list').MyList
 
 Test Case 1:
@@ -38,3 +39,8 @@ Test Case 3:
     True
     >>>type(my_list)
     <class '1-my_list.MyList'>
+
+Test Case 4:
+    >>>my_list = MyList()
+    >>>print(my_list)
+    []
