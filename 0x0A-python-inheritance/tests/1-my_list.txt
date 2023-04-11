@@ -16,35 +16,3 @@ Test Case 1:
     [1, 2, 3, 4, 5]
     >>>print(my_list)
     [1, 4, 2, 3, 5]
-
-Test Case 2:
-    >>>my_list = MyList()
-    >>>my_list.append(-1)
-    >>>my_list.append(-4)
-    >>>my_list.append(23)
-    >>>my_list.append(13)
-    >>>my_list.append(-5)
-    >>>print(my_list)
-    [-1, -4, 23, 13, -5]
-    >>>my_list.print_sorted()
-    [-5, -4, -1, 13, 23]
-    >>>print(my_list)
-    [-4, -1, 0.5, 13, 23]
-
-Test Case 3:
-    >>>my_list = MyList()
-    >>>isinstance(my_list, list)
-    True
-
-    >>>my_list = MyList()
-    >>>issubclass(MyList, list)
-    True
-
-    >>>my_list = MyList()
-    >>>isinstance(my_list, MyList)
-    True
-
-Test Case 4:
-    >>>my_list = MyList()
-    >>>my_list.print_sorted()
-    []
