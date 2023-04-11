@@ -34,9 +34,7 @@ Test Case 3:
     >>>my_list = MyList()
     >>>isinstance(my_list, list)
     True
-    >>>issubclass(my_list, list)
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    TypeError: issubclass() arg 1 must be a class
-    >>>type(my_list, list)
+    >>>issubclass(MyList, list)
+    True
+    >>>type(my_list)
     <class '1-my_list.MyList'>
