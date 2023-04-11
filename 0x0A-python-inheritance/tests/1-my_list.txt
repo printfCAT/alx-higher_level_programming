@@ -23,11 +23,11 @@ Test Case 2:
     >>>my_list.append(-4)
     >>>my_list.append(23)
     >>>my_list.append(13)
-    >>>my_list.append(0.5)
+    >>>my_list.append(-5)
     >>>print(my_list)
-    [-1, -4, 23, 13, 0.5]
+    [-1, -4, 23, 13, -5]
     >>>my_list.print_sorted()
-    [-4, -1, 0.5, 13, 23]
+    [-5, -4, -1, 13, 23]
     >>>print(my_list)
     [-4, -1, 0.5, 13, 23]
 
@@ -36,6 +36,8 @@ Test Case 3:
     >>>isinstance(my_list, list)
     True
     >>>issubclass(MyList, list)
+    True
+    >>>isinstance(MyList, list)
     True
 
 Test Case 4:
