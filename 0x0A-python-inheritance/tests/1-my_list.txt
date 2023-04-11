@@ -37,7 +37,7 @@ Test Case 3:
     True
     >>>issubclass(MyList, list)
     True
-    >>>isinstance(MyList, list)
+    >>>isinstance(my_list, MyList)
     True
 
 Test Case 4:
