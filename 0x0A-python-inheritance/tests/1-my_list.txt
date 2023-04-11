@@ -1,50 +1,50 @@
-#1-my_list.py
+# 1-my_list.py
 
-#importing module:
->>>MyList = __import__('1-my_list').MyList
+# importing module:
+>>> MyList = __import__('1-my_list').MyList
 
 Test Case 1:
-    >>>my_list = MyList()
-    >>>my_list.append(1)
-    >>>my_list.append(4)
-    >>>my_list.append(2)
-    >>>my_list.append(3)
-    >>>my_list.append(5)
-    >>>print(my_list)
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
     [1, 4, 2, 3, 5]
-    >>>my_list.print_sorted()
+    >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
-    >>>print(my_list)
+    >>> print(my_list)
     [1, 4, 2, 3, 5]
 
 Test Case 2:
-    >>>my_list = MyList()
-    >>>my_list.append(-1)
-    >>>my_list.append(-4)
-    >>>my_list.append(2)
-    >>>my_list.append(3)
-    >>>my_list.append(-5)
-    >>>print(my_list)
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(-5)
+    >>> print(my_list)
     [-1, -4, 2, 3, -5]
-    >>>my_list.print_sorted()
+    >>> my_list.print_sorted()
     [-5, -4, -1, 2, 3]
-    >>>print(my_list)
+    >>> print(my_list)
     [-1, -4, 2, 3, -5]
 
 Test Case 3:
-    >>>my_list = MyList()
-    >>>isinstance(my_list, list)
+    >>> my_list = MyList()
+    >>> isinstance(my_list, list)
     True
 
-    >>>my_list = MyList()
-    >>>issubclass(MyList, list)
+    >>> my_list = MyList()
+    >>> issubclass(MyList, list)
     True
 
-    >>>my_list = MyList()
-    >>>isinstance(my_list, MyList)
+    >>> my_list = MyList()
+    >>> isinstance(my_list, MyList)
     True
 
 Test Case 4:
-    >>>my_list = MyList()
-    >>>my_list.print_sorted()
-    >>>[]
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
