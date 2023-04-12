@@ -9,3 +9,4 @@
 * 0x06-python-classes
 * 0x08-python-more_classes
 * 0x09-python-everything_is_object  
+* 0x0A-python-inheritance  
