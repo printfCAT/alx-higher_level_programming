@@ -3,52 +3,43 @@
 # importing module:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Testcase 1:
+Testcase 1
     >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
 
-    >>> try:
-    ...     bg.integer_validator("name", "John")
-    >>> except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] name must be an integer
-    >>> try:
-    ...     bg.integer_validator("age", 0)
-    ... except Exception as e:
-    ...    print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [ValueError] age must be greater than 0
-    >>> try:
-    ...     bg.integer_validator("distance", -4)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [ValueError] distance must be greater than 0
-    >>> try:
-    ...     bg.integer_validator("my_float", 3.14)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] my_float must be an integer
-    >>> try:
-    ...     bg.integer_validator()
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] integer_validator() missing 2 required
+    >>>     bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: age must be greater than 0
+
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+        ...
+    ValueError: distance must be greater than 0
+
+    >>> bg.integer_validator("my_float", 3.14)
+    Traceback (most recent call last):
+        ...
+    TypeError: my_float must be an integer
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required
      positional arguments: 'name' and 'value'
-    >>> try:
-    ...     bg.integer_validator("width")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] integer_validator() missing 1 required
+
+    >>> bg.integer_validator("width")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required
      positional argument: 'value'
+
     >>> bg.integer_validator("width", 10)
     >>> bg.integer_validator("height", 20)
-    >>> try:
-    ...     bg.integer_validator("depth", [30, 12, 89]))
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] depth must be an integer
+    >>> bg.integer_validator("depth", [30, 12, 89]))
+    Traceback (most recent call last):
+        ...
+    TypeError: depth must be an integer
