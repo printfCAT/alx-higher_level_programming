@@ -3,7 +3,7 @@
 # importing module:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Testcase 1
+Testcase 1:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
