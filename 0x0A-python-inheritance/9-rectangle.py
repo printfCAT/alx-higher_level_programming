@@ -23,6 +23,6 @@ class Rectangle(BaseGeometry):
         """ finds area of Rectangle """
         return self.__width * self.__height
 
-    def __str(self):
+    def __str__(self):
         """ prints an instance of Rectangle """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
