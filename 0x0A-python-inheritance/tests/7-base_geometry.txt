@@ -43,3 +43,9 @@ Testcase 1:
     Traceback (most recent call last):
         ...
     TypeError: depth must be an integer
+
+    >>> bg.integer_validator("true", True)
+    >>> bg.integer_validator("false", False)
+    Traceback (most recent call last):
+        ...
+    ValueError: false must be greater than 0
