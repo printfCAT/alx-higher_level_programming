@@ -17,11 +17,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """ retrieves a dictionary rep of student instance """
-        if isinstance(attrs, list) and all(isinstance(item, str) for item in attrs):
-            return attrs
-        else:
+        if attrs is None or isinstance(attrs, list) and all(isinstance(item, str) for item in attrs):
             return {
                     "first_name": self.first_name,
                     "last_name": self.last_name,
                     "age": self.age
                     }
+        else:
+            return {}
