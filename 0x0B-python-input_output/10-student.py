@@ -28,4 +28,4 @@ class Student:
             for key in attrs:
                 if hasattr(self, key):
                     new_dict[key] = getattr(self, key)
-                return new_dict
+            return new_dict
