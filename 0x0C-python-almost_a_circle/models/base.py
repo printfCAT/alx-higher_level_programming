@@ -79,6 +79,8 @@ class Base:
         """ serializes a file in CSV """
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as csv_file:
+            if list_objs is None or list_objs == []:
+                csv_file.write("[]")
             if cls.__name__ == 'Rectangle':
                 field = ['id', 'width', 'height', 'x', 'y']
             elif cls.__name__ == 'Square':
@@ -91,11 +93,13 @@ class Base:
     def load_from_file_csv(cls):
         """ deserializes a file from CSV """
         filename = cls.__name__ + ".csv"
-        with open(filename, 'r') as csv_file:
+        with open(filename, 'r', newline='') as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            instances = []
-            for row in csv_reader:
-                row_dict = {k: int(v) for k, v in row.items()}
-                inst = cls.create(**row_dict)
-                instances.append(inst)
-        return instances
+            if cls.__name__ == 'Rectangle':
+                field = ['id', 'width', 'height', 'x', 'y']
+            else:
+                field = ['id', 'size', 'x', 'y']
+            list_dict = csv.DictReader(csvfile, fieldnames=fieldnames)
+            list_dicts = [dict([k, int(v)] for k, v in dicts.items())
+                          for dicts in list_dicts]
+            return [cls.create(**dicts) for dicts in list_dicts]
