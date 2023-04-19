@@ -53,8 +53,7 @@ class Base:
     def create(cls, **dictionary):
         """ returns an instance with all attributes set """
         s1 = cls(3, 5, 1)
-        for key, value in dictionary.items():
-            setattr(s1, key, value)
+        s1.update(**dictionary)
         return s1
 
     @classmethod
