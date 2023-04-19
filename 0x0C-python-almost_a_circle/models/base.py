@@ -94,7 +94,6 @@ class Base:
         """ deserializes a file from CSV """
         filename = cls.__name__ + ".csv"
         with open(filename, 'r', newline='') as csv_file:
-            csv_reader = csv.DictReader(csv_file)
             if cls.__name__ == 'Rectangle':
                 field = ['id', 'width', 'height', 'x', 'y']
             else:
