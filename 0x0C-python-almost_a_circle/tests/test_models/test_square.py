@@ -5,6 +5,7 @@
 import io
 import unittest
 from unittest.mock import patch
+from models.basee import Base
 from models.square import Square
 
 
