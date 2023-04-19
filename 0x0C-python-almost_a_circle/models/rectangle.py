@@ -118,8 +118,9 @@ class Rectangle(Base):
             for n in range(len(args)):
                 setattr(self, arg_names[n], args[n])
         else:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def to_dictionary(self):
         """ returns dict rep of rectangle """
         return {
@@ -132,4 +133,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """ prints a rectangle instance """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)

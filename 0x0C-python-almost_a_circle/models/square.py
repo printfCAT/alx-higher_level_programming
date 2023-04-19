@@ -40,8 +40,8 @@ class Square(Rectangle):
             for n in range(len(args)):
                 setattr(self, arg_names[n], args[n])
         else:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ returns dict rep of square """
@@ -54,4 +54,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """ prints a square instance """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
