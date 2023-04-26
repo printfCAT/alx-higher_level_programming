@@ -52,11 +52,19 @@ Test case 4:
     Traceback (most recent call last):
       ...
     TypeError: a must be an integer
+    >>> print(add_integer({}))
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
     >>> print(add_integer([], 4))
     Traceback (most recent call last):
       ...
     TypeError: a must be an integer
     >>> print(add_integer(5, ()))
+    Traceback (most recent call last):
+      ...
+    TypeError: b must be an integer
+    >>> print(add_integer(5, {}))
     Traceback (most recent call last):
       ...
     TypeError: b must be an integer
