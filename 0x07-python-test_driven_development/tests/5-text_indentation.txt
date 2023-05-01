@@ -1,0 +1,52 @@
+# 5-text_indentation.py module
+
+# import the module:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("text:")
+text:
+
+>>> text_indentation(" text.")
+text.
+
+>>> text_indentation(" ")
+<BLANKLINE>
+
+>>> text_indentation("text? ")
+text?
+
+text_indentation(" text? text. ")
+text?
+<BLANKLINE>
+text.
+<BLANKLINE>
+
+text_indentation("text")
+text
+
+>>> text_indentation("text: text?\ntext.")
+text:
+<BLANKLINE>
+text?
+<BLANKLINE>
+<BLANKLINE>
+text.
+
+>>> text_indentation("text \n text?")
+text 
+text?
+
+>>> text_indentation(7)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+>>> text_indentation(["text?", "text.", "text:"])
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
