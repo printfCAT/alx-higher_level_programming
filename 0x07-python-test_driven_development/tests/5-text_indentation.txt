@@ -5,26 +5,22 @@
 
 >>> text_indentation("text:")
 text:
-<BLANKLINE>
 
 >>> text_indentation(" text.")
 text.
-<BLANKLINE>
 
 >>> text_indentation(" ")
 <BLANKLINE>
 
 >>> text_indentation("text? ")
 text?
-<BLANKLINE>
 
-text_indentation(" text? text. ")
+>>> text_indentation(" text? text. ")
 text?
 <BLANKLINE>
 text.
-<BLANKLINE>
 
-text_indentation("text")
+>>> text_indentation("text")
 text
 
 >>> text_indentation("text: text?\ntext.")
@@ -34,12 +30,10 @@ text?
 <BLANKLINE>
 <BLANKLINE>
 text.
-<BLANKLINE>
 
 >>> text_indentation("text \n text?")
 text 
 text?
-<BLANKLINE>
 
 >>> text_indentation(7)
 Traceback (most recent call last):
