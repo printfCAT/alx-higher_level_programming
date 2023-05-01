@@ -11,5 +11,3 @@ def print_square(size):
     for i in range(0, size):
         [print("#", end="") for j in range(size)]
         print("")
-    if size == 0:
-        print("")
