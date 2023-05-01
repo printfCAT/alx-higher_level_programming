@@ -12,7 +12,8 @@ def text_indentation(text):
         if add_newline:
             result += "\n\n"
             add_newline = False
-        if char == " " and not add_newline and (result == "" or result[-1] == "\n"):
+        if char == " " and not add_newline and (result == ""
+                                                or result[-1] == "\n"):
             continue
         result += char
         if char in ".?:":
