@@ -1,10 +1,6 @@
 #!/usr/bin/node
 function add (a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    console.log('NaN');
-  } else {
     return a + b;
-  }
 }
 const { argv } = require('process');
 const a = parseInt(argv[2], 10);
