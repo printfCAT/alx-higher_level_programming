@@ -18,4 +18,4 @@ if __name__ == "__main__":
     results = curs.fetchall()
     for row in results:
         if row[1] == argv[4]:
-           print(row)
+            print(row)
