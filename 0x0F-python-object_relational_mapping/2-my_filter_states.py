@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Lists all states starting with N from the database hbtn_0e_0_usa. """
+"""
+    Lists all states matching the terminal input
+    from the database hbtn_0e_0_usa.
+ """
 
 
 import MySQLdb
@@ -11,7 +14,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
     curs = db.cursor()
-    curs.execute("SELECT * FROM states WHERE name='{}'\
+    curs.execute("SELECT * FROM states WHERE BINARY name='{}'\
                  ORDER BY states.id ASC".format(argv[4]))
     results = curs.fetchall()
     for row in results:
