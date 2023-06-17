@@ -18,10 +18,10 @@ if __name__ == "__main__":
                  JOIN cities ON cities.state_id = states.id\
                  ORDER BY cities.id ASC")
     results = curs.fetchall()
-    city_set = set()
+    city_list = []
     for row in results:
-        if row[1] == argv[4]:
-            city_set.add(row[0])
+        if row[1] == argv[4] and row[0] not in city_list:
+            city_list.append(row[0])
 
-    unique_cities = ', '.join(city_set)
+    unique_cities = ', '.join(city_list)
     print(unique_cities)
