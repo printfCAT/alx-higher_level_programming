@@ -12,7 +12,7 @@ if __name__ == "__main__":
                             @localhost:3306/{argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like(%a%))
+    states = session.query(State).filter(State.name.like('%a%'))
     for state in states:
         session.delete(state)
     session.commit()
