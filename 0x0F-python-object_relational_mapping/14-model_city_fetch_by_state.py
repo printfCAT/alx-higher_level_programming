@@ -13,7 +13,7 @@ if __name__ == "__main__":
                             @localhost:3306/{argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(City, State).filter(City.state_id == State.id)\
-        .order_by(City.id.asc)
-    for city, state in results:
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    results = session.query(State).join(City).order_by(City.id.asc())
+    for state in results:
+        for city in state.cities:
+            print("{}: ({}) {}".format(state.name, city.id, city.name))
