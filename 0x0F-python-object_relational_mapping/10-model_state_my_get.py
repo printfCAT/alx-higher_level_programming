@@ -18,5 +18,6 @@ if __name__ == "__main__":
         if state.name == argv[4]:
             print(state.id)
             Match_found = True
+            break
     if not Match_found:
         print("Not found")
