@@ -17,7 +17,7 @@ if __name__ == "__main__":
     for state in states:
         if state.name == argv[4]:
             print(state.id)
-            Match_found = True
+            match_found = True
             break
     if match_found is False:
         print("Not found")
