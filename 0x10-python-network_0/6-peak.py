@@ -16,6 +16,7 @@ def find_peak(list_of_integers):
                 if list_of_integers[i] > list_of_integers[i - 1]:
                     peaks.append(str(list_of_integers[i]))
             else:
-                if list_of_integers[i] > list_of_integers[i - 1] and list_of_integers[i] > list_of_integers[i + 1]:
+                if list_of_integers[i] > list_of_integers[i - 1] \
+                   and list_of_integers[i] > list_of_integers[i + 1]:
                     peaks.append(str(list_of_integers[i]))
     return ", ".join(peaks)
